@@ -1,0 +1,12 @@
+ npx typescript-calculator
+ npx my-guessing-number-game
+ npx atm_02
+ npx todo-03
+ npx currency-converter-04
+ npx game-word-counter-05
+npx maria-my-student-managment-system-06
+ npx maria-adventure-game-07
+ npx quiz-08
+ npx countdown-timer-09
+ npx oop-10
+ npx maria-11-oop-bank
