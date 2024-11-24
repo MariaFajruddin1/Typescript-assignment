@@ -1,0 +1,23 @@
+      TYPESCRIPT INSTALATION:-
+1.  npm i -g typescript           ===>   typescript install
+         *tsc -v ====> check version
+
+2.  npm init -y    ===> package.json
+
+3.  tsc --init     ===> tsconfig.json
+       INSTALLATION PACKAGES FOR PROJECT:--
+1.  chalk   ==> npm i chalk
+
+2.  chalk-animation   ==> npm i chalk-animation
+      *@type/chalk animation ==> npm i @types/chalk-animation
+
+3.  inquirer ==> npm i inquirer
+      *@type/inquirer ==> npm i @types/inquirer
+
+4.  gradient-string  ==> npm i gradient-string
+      *@types/gradient-string  ==> npm i @types/gradient-string
+
+5.  figlet  ==> npm i figlet
+       *@types/figlet  ==>  npm i @types/figlet
+
+

@@ -1,0 +1,87 @@
+               //FIRST STEP
+go to tsconfig.json file and change this line code:---
+	1.  "target": "es2016",  ====> "target": "ES2022",        
+	2.  "module": "commonjs", ===>  "module": "NodeNext",    
+	3.  // "moduleResolution": "node", ==>  "moduleResolution": "NodeNext",
+
+
+		//SECONT STEP
+go to package .json file and add this line:----
+     		
+  1.   "type": "module",  
+  2.    "bin": "./index.js",
+just like:---
+ 	{
+	  "name": "test-packages",
+ 	 "version": "1.0.0",
+  	"description": "",
+  	"main": "index.js",
+  	"type": "module",   ==
+  	"scripts": {
+   	 "test": "echo \"Error: no test specified\" && exit 1"
+  	},
+  	"keywords": [],
+  	"author": "",
+  	"license": "ISC",
+  	"bin": "./index.js",  ==
+  	"dependencies": {
+   	 "@types/chalk-animation": "^1.6.1",
+   	 "@types/figlet": "^1.5.5",
+    	"@types/gradient-string": "^1.1.2",
+   	 "@types/inquirer": "^9.0.3",
+   	 "animation": "^0.1.3",
+    	"chalk": "^5.2.0",
+    	"figlet": "^1.5.2",
+    	"gradient-string": "^2.0.2",
+    	"inquirer": "^9.1.4"
+ 	 }
+	}
+
+
+
+
+		//THIRD STEP
+
+#! /usr/bin/env node   ====> MOST IMPORTANT
+
+             //IMPORT PACKAGES
+import inquirer from "inquirer";
+import chalk from "chalk";
+import figlet from "figlet";
+import gradient from "gradient-string";
+import chalkAnimation from 'chalk-animation';
+   
+
+        // CHALK-ANIMATION 
+const sleep = (ms = 2000) => new Promise((r) => setTimeout(r, ms))
+async function Welcome() {
+    const rainbowTitle = chalkAnimation.rainbow(figlet.textSync(`Welcome  My  Todo  List`)
+    )
+    await sleep()
+    rainbowTitle.stop()
+}
+await Welcome()
+
+
+
+          //CHALK
+console.log(chalk.red('Hello Maria'));
+console.log(chalk.bold('Hello Maria'));
+console.log(chalk.bgMagenta('Hello Maria'));
+console.log(chalk.green('Hello Maria'));
+console.log(chalk.white('Hello Maria'));
+
+
+
+
+          //GRADIENT-STRING
+console.log(gradient.rainbow('Hello Maria'));
+
+
+          //INQUIRER
+const test = await inquirer.prompt([{
+	type:'number',
+	name:'age',
+	message:'Write your age?'
+}])
+console.log(test)
